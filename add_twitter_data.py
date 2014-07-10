@@ -76,12 +76,12 @@ def twitter_credentials():
                 else:
                     line["user_mentions"] = ""
            line["retweet_count"] = str(tweetdata["retweet_count"])
-           line["retweeted"]     = str(tweetdata["retweeted"])
            line["place"]         = str(tweetdata["place"])
            line["geo"]           = str(tweetdata["geo"])
            if tweetdata["user"] is not None:
                line["followers_count"]  = str(tweetdata["user"]["followers_count"])
                line["favourites_count"] = str(tweetdata["user"]["favourites_count"])
+               line["friends_count"]    = str(tweetdata["user"]["friends_count"])
                line["listed_count"]     = str(tweetdata["user"]["listed_count"])
                line["location"]         = tweetdata["user"]["location"].encode('utf-8')
                line["utc_offset"]       = str(tweetdata["user"]["utc_offset"])
