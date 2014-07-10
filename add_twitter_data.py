@@ -57,7 +57,6 @@ def twitter_credentials():
                #sys.exit()           
                break
            line["coordinates"]  = str(tweetdata["coordinates"])
-           line["favorited"]    = str(tweetdata["favorited"])
            if tweetdata["entities"] is not None:
                 if tweetdata["entities"]["hashtags"] is not None:
                     hashtag_string = ""
