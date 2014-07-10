@@ -83,7 +83,7 @@ def twitter_credentials():
                line["followers_count"]  = str(tweetdata["user"]["followers_count"])
                line["favourites_count"] = str(tweetdata["user"]["favourites_count"])
                line["listed_count"]     = str(tweetdata["user"]["listed_count"])
-               line["location"]         = str(tweetdata["user"]["location"])
+               line["location"]         = tweetdata["user"]["location"].encode('utf-8')
                line["utc_offset"]       = str(tweetdata["user"]["utc_offset"])
                line["listed_count"]     = str(tweetdata["user"]["listed_count"])
                line["lang"]             = str(tweetdata["user"]["lang"])
